@@ -95,7 +95,7 @@ function Readable(options) {
   if (!(this instanceof Readable))
     return new Readable(options);
 
-  // this._readableState = new ReadableState(options, this);
+  this._readableState = new ReadableState(options, this);
 
   // legacy
   this.readable = true;
