@@ -154,7 +154,7 @@ TCPSocket.prototype.connect = function (/*options | [port], [host], [cb]*/) {
         }
         
         if (!tls.checkServerIdentity(host, cert)) {
-          throw new Error('Hostname/IP doesn\'t match certificate\'s altnames error event');
+          throw new Error('Hostname/IP doesn\'t match certificate\'s altnames');
         }
 
         self._ssl = ssl;
